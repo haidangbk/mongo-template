@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thêm người dùng</title>
+</head>
+<body>
+	<form th:action="@{/update-user?id=}+${user._id}" method="POST" th:object="${user}">
+		<label>Tên</label>
+		<input type="text" th:field="*{name}" /> 
+		<label>Tuổi</label>
+		<input type="text" th:field="*{age}" />
+		<label>Địa chỉ</label>
+		<input type="text" th:field="*{address}" />
+		<input type="submit" value="submit" />
+	</form>
+</body>
+</html>
